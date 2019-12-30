@@ -1,10 +1,15 @@
-﻿using System;
+﻿using Mugger.Domain.Common;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Mugger.Domain.Entities
 {
-    class Tag
+    public class Tag : AuditableEntity
     {
+        public long Id { get; set; }
+        public string Name { get; set; }
+        public string Icon { get; set; }
+
+        public IList<ProductTag> Products { get; set; }
+        public int TotalProducts { get; set; }
     }
 }

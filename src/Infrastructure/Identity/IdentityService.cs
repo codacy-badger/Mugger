@@ -1,9 +1,10 @@
-﻿using Mugger.Application.Common.Interfaces;
-using Mugger.Application.Common.Models;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Mugger.Application.Common.Interfaces;
+using Mugger.Application.Common.Models;
 using System.Linq;
 using System.Threading.Tasks;
+
 
 namespace Mugger.Infrastructure.Identity
 {

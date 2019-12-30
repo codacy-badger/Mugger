@@ -1,5 +1,4 @@
-﻿
-using Application.Common.Models;
+﻿using Mugger.Application.Common.Models;
 using System.Threading.Tasks;
 
 namespace Mugger.Application.Common.Interfaces

@@ -1,6 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿
+using Microsoft.AspNetCore.Identity;
+using Mugger.Application.Common.Models;
+using System.Linq;
 
 namespace Mugger.Infrastructure.Identity
 {

@@ -5,28 +5,21 @@ namespace Mugger.Domain.Entities
 {
     public class Product : AuditableEntity
     {
-        public long Id { get; set; }
         public string Name { get; set; }
         public string Slug { get; set; }
-        public string StoreProductId { get; set; }
         public string Description { get; set; }
-        public double Rating { get; set; } = 0;
-        public int TotalOrders { get; set; } = 0;
-        public string URL { get; set; }
-        public string PromotionURL { get; set; }
-        public string ImageURL { get; set; }
-        public decimal Price { get; set; }
-        public decimal OriginalPrice { get; set; }
-        public decimal PriceInDollars { get; set; }
-        public decimal OriginalPriceInDollars { get; set; }
+        public string ImageUrl { get; set; }
 
-    
-        public Store Store { get; set; }
-     
-        public IList<ProductTag> ProductTags { get; set; }
+        public ICollection<Offer> Offers { get; set; }
 
-        public IList<Tag> Tags { get; set; }
+        public long BrandId { get; set; }
+        public Brand Brand { get; set; }
 
+        public double Rating { get; set; }
+        public ICollection<Review> Reviews { get; set; }
+
+        public ICollection<ProductTag> ProductTags { get; set; }
+       
     }
 
     public class ProductTag

@@ -2,7 +2,7 @@
 
 namespace Mugger.Domain.Common
 {
-    public class AuditableEntity
+    public class AuditableEntity : BaseEntity
     {
         public string CreatedBy { get; set; }
 

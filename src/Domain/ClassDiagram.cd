@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Mugger.Domain.Entities.Offer">
+    <Position X="15.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAACAAAAASAgAAIAAAAAAAAAAgAAAQBACAAAAAAACAA=</HashCode>
+      <FileName>Entities\Offer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mugger.Domain.Entities.Product">
+    <Position X="18.5" Y="6.5" Width="1.5" />
+    <AssociationLine Name="ProductTags" Type="Mugger.Domain.Entities.ProductTag" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="19.25" Y="6.5" />
+        <Point X="19.25" Y="4.872" />
+        <Point X="19.25" Y="4.872" />
+        <Point X="19.25" Y="4.671" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.14" Y="0.192" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Reviews" Type="Mugger.Domain.Entities.Review">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.124" Y="0.109" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAQEAAAAAwAAAAAAAAAAQAAAAAAAEAIAAAAAQRAAA=</HashCode>
+      <FileName>Entities\Product.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Offers" />
+      <Property Name="ProductTags" />
+      <Property Name="Reviews" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Mugger.Domain.Entities.ProductTag">
+    <Position X="18.5" Y="3.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>EAACAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Entities\Product.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mugger.Domain.Entities.Tag">
+    <Position X="18.5" Y="0.5" Width="1.5" />
+    <AssociationLine Name="ProductTags" Type="Mugger.Domain.Entities.ProductTag">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.112" Y="0.171" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAQAAAAAAAAAIAAAAAUAAAA=</HashCode>
+      <FileName>Entities\Tag.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="ProductTags" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Mugger.Domain.Common.AuditableEntity" Collapsed="true">
+    <Position X="11" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAAAACAAAAAAQAAAAAAAAAAAE=</HashCode>
+      <FileName>Common\AuditableEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mugger.Domain.Entities.Review" Collapsed="true">
+    <Position X="15.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Review.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mugger.Domain.Entities.Brand">
+    <Position X="21" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAABAAAAAQAAAAAAAAACAAAAAUAAAQ=</HashCode>
+      <FileName>Entities\Brand.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Products" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Mugger.Domain.Common.BaseEntity" Collapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\BaseEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mugger.Domain.Entities.Seller">
+    <Position X="12.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAwAAACBAAAAAQAAAAAAAAACAAAAAUAAAA=</HashCode>
+      <FileName>Entities\Seller.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Offers" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Mugger.Domain.Entities.Webshop">
+    <Position X="9.5" Y="6.5" Width="1.5" />
+    <AssociationLine Name="Sellers" Type="Mugger.Domain.Entities.Seller">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.152" Y="0.046" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAABAAAAAQAAAAAAAAACAAAAAUAAAA=</HashCode>
+      <FileName>Entities\Webshop.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Sellers" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

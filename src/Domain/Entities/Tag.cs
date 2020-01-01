@@ -3,13 +3,14 @@ using System.Collections.Generic;
 
 namespace Mugger.Domain.Entities
 {
-    public class Tag : AuditableEntity
+    public class Tag : BaseEntity
     {
-        public long Id { get; set; }
+        public string Slug { get; set; }
         public string Name { get; set; }
+        public string Description { get; set; }
         public string Icon { get; set; }
 
-        public IList<ProductTag> Products { get; set; }
-        public int TotalProducts { get; set; }
+        public ICollection<ProductTag> ProductTags { get; set; }
+
     }
 }

@@ -9,7 +9,7 @@ namespace Mugger.Infrastructure.Persistence.Configurations
     {
         public void Configure(EntityTypeBuilder<Product> builder)
         {
-            builder.HasAlternateKey(t => t.StoreProductId);
+            builder.HasAlternateKey(t => t.WebshopProductId);
 
             builder.HasAlternateKey(t => t.Slug);
         }

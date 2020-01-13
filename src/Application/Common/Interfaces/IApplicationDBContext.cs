@@ -10,7 +10,7 @@ namespace Mugger.Application.Common.Interfaces
     {
         DbSet<Product> Products { get; set; }
         DbSet<ProductTag> ProductTags { get; set; }
-        DbSet<Store> Stores { get; set; }
+        DbSet<Webshop> Webshops { get; set; }
         DbSet<Tag> Tags { get; set; }
 
         Task<int> SaveChangesAsync(CancellationToken cancellationToken);

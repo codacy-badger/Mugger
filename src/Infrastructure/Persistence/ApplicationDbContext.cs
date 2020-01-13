@@ -30,7 +30,7 @@ namespace Mugger.Infrastructure.Persistence
 
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductTag> ProductTags { get; set; }
-        public DbSet<Store> Stores { get; set; }
+        public DbSet<Webshop> Webshops { get; set; }
         public DbSet<Tag> Tags { get; set; }
        
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())

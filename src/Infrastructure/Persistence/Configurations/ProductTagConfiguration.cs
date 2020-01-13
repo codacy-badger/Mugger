@@ -11,7 +11,7 @@ namespace Mugger.Infrastructure.Persistence.Configurations
             builder.HasKey(pt => new { pt.ProductId, pt.TagId });
 
             builder.HasOne(pt => pt.Tag)
-                 .WithMany(t => t.Products)
+                 .WithMany(t => t.ProductTags)
                  .HasForeignKey(pt => pt.TagId);
 
             builder.HasOne(pt => pt.Product)

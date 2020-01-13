@@ -5,6 +5,7 @@ namespace Mugger.Domain.Entities
 {
     public class Product : AuditableEntity
     {
+        public string WebshopProductId { get; set; }
         public string Name { get; set; }
         public string Slug { get; set; }
         public string Description { get; set; }

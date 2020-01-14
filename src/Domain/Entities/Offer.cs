@@ -13,7 +13,6 @@ namespace Mugger.Domain.Entities
 
         public decimal Price { get; set; }
         public decimal OriginalPrice { get; set; }        
-        public Dictionary<DateTime, decimal> PriceHistory { get; set; }
 
         public long SellerId { get; set; }
         public Seller Seller { get; set; }

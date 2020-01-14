@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Mugger.Infrastructure.Persistence;
 
 namespace Mugger.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200114185217_product_brand_relationship")]
+    partial class product_brand_relationship
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -337,7 +339,7 @@ namespace Mugger.Infrastructure.Migrations
                         .HasColumnType("bigint")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<long?>("BrandId")
+                    b.Property<long>("BrandId")
                         .HasColumnType("bigint");
 
                     b.Property<DateTime>("Created")
@@ -464,7 +466,7 @@ namespace Mugger.Infrastructure.Migrations
                     b.Property<string>("Url")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<long?>("WebshopId")
+                    b.Property<long>("WebshopId")
                         .HasColumnType("bigint");
 
                     b.HasKey("Id");
@@ -704,7 +706,9 @@ namespace Mugger.Infrastructure.Migrations
                 {
                     b.HasOne("Mugger.Domain.Entities.Brand", "Brand")
                         .WithMany("Products")
-                        .HasForeignKey("BrandId");
+                        .HasForeignKey("BrandId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Mugger.Domain.Entities.ProductTag", b =>
@@ -735,7 +739,9 @@ namespace Mugger.Infrastructure.Migrations
                 {
                     b.HasOne("Mugger.Domain.Entities.Webshop", "Webshop")
                         .WithMany("Sellers")
-                        .HasForeignKey("WebshopId");
+                        .HasForeignKey("WebshopId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

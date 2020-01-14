@@ -14,7 +14,7 @@ namespace Mugger.Domain.Entities
         public string Icon { get; set; }
 
 
-        public long WebshopId { get; set; }
+        public long? WebshopId { get; set; }
         public Webshop Webshop { get; set; }
 
         public ICollection<Offer> Offers { get; set; }

@@ -52,7 +52,7 @@ namespace Mugger.WebAPI
 
             services.AddOpenApiDocument(configure =>
             {
-                configure.Title = "CleanArchitecture API";
+                configure.Title = "Mugger API";
                 configure.AddSecurity("JWT", Enumerable.Empty<string>(), new OpenApiSecurityScheme
                 {
                     Type = OpenApiSecuritySchemeType.ApiKey,

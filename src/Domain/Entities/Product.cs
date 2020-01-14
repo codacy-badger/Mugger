@@ -13,7 +13,7 @@ namespace Mugger.Domain.Entities
 
         public ICollection<Offer> Offers { get; set; }
 
-        public long BrandId { get; set; }
+        public long? BrandId { get; set; }
         public Brand Brand { get; set; }
 
         public double Rating { get; set; }

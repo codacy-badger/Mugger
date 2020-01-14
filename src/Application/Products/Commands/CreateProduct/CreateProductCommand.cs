@@ -13,13 +13,14 @@ namespace Mugger.Application.Products.Commands.CreateProduct
         public string Slug { get; set; }
         public string Description { get; set; }
         public string ImageUrl { get; set; }
+        public double Rating { get; set; }
 
 
-        public class CreateTodoItemCommandHandler : IRequestHandler<CreateProductCommand, long>
+        public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand, long>
         {
             private readonly IApplicationDbContext _context;
 
-            public CreateTodoItemCommandHandler(IApplicationDbContext context)
+            public CreateProductCommandHandler(IApplicationDbContext context)
             {
                 _context = context;
             }
@@ -32,7 +33,8 @@ namespace Mugger.Application.Products.Commands.CreateProduct
                     Name = request.Name,
                     Slug = request.Slug,
                     Description = request.Description,
-                    ImageUrl = request.ImageUrl
+                    ImageUrl = request.ImageUrl,
+                    Rating = request.Rating
                 };
 
                 _context.Products.Add(entity);

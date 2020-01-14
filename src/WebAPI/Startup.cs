@@ -12,6 +12,7 @@ using Microsoft.Extensions.Hosting;
 using NSwag;
 using NSwag.Generation.Processors.Security;
 using System.Linq;
+using Mugger.WebAPI.Common;
 
 namespace Mugger.WebAPI
 {
@@ -80,6 +81,7 @@ namespace Mugger.WebAPI
                 app.UseHsts();
             }
 
+            app.UseCustomExceptionHandler();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 

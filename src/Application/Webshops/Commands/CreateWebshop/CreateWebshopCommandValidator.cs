@@ -24,10 +24,10 @@ namespace Mugger.Application.Webshops.Commands.CreateWebshop
                 .MustAsync(BeUniqueName).WithMessage("The specified Name already exists.");
 
             RuleFor(v => v.Url)
-                .NotEmpty();
+                .NotEmpty().WithMessage("Description is required.");
 
             RuleFor(v => v.Description)
-                .NotEmpty();
+                .NotEmpty().WithMessage("Description is required.");
         }
 
         public async Task<bool> BeUniqueName(CreateWebshopCommand model, string name, CancellationToken cancellationToken)

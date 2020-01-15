@@ -19,7 +19,6 @@ namespace Mugger.Application.UnitTests.Webshops.Commands.CreateWebshop
                 Url = "https://www.amazon.com/",
                 ImageUrl = "/amazon.png",
                 IconUrl = "/amazon-icon.png"
-
             };
 
             var handler = new CreateWebshopCommand.CreateWebshopCommandHandler(Context);

@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace Mugger.WebAPI.Controllers
 {
-    public class WebshopController : ApiController
+    public class WebshopsController : ApiController
     {
 
         [HttpPost]

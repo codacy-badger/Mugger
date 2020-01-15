@@ -17,8 +17,8 @@ namespace Mugger.Application.UnitTests.Webshops.Commands.CreateWebshop
                 Name = "Amazon",
                 Description = "Amazon: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more",
                 Url = "https://www.amazon.com/",
-                ImageURL = "/amazon.png",
-                Icon = "/amazon-icon.png"
+                ImageUrl = "/amazon.png",
+                IconUrl = "/amazon-icon.png"
 
             };
 

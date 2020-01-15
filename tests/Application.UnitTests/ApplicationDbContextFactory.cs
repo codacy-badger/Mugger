@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Moq;
 using Mugger.Application.Common.Interfaces;
+using Mugger.Domain.Entities;
 using Mugger.Infrastructure.Persistence;
 using System;
 
@@ -43,7 +44,11 @@ namespace Mugger.Application.UnitTests
         }
 
         public static void SeedSampleData(ApplicationDbContext context)
-        {            
+        {
+            context.Webshops.AddRange(
+                new Webshop() { Id = 10, Slug="webshop_1", Name = "Webshop_1" }
+                );
+
             context.SaveChanges();
         }
 

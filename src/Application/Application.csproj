@@ -21,7 +21,7 @@
 
   <ItemGroup>
     <Folder Include="Products\Queries\" />
-    <Folder Include="Webshops\Queries\" />
+    <Folder Include="Webshops\Queries\GetWebshops\" />
   </ItemGroup>
 
 </Project>

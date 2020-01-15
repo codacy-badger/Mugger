@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Mugger.Application.Webshops.Commands.CreateWebshop;
+using Mugger.Application.Webshops.Commands.DeleteWebshop;
 using System.Threading.Tasks;
 
 namespace Mugger.WebAPI.Controllers
@@ -12,5 +13,13 @@ namespace Mugger.WebAPI.Controllers
         {
             return await Mediator.Send(command);
         }
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> Delete(long id)
+        {
+            await Mediator.Send(new DeleteWebshopCommand { Id = id });
+            return NoContent();
+        }
+
     }
 }

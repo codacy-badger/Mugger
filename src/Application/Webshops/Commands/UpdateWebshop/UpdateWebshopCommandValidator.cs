@@ -3,18 +3,17 @@ using Microsoft.EntityFrameworkCore;
 using Mugger.Application.Common.Interfaces;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Mugger.Application.Webshops.Commands.CreateWebshop
+namespace Mugger.Application.Webshops.Commands.UpdateWebshop
 {
-    public class CreateWebshopCommandValidator : AbstractValidator<CreateWebshopCommand>
+    public class UpdateWebshopCommandValidator : AbstractValidator<UpdateWebshopCommand>
     {
         private readonly IApplicationDbContext _context;
 
-        public CreateWebshopCommandValidator(IApplicationDbContext context)
+        public UpdateWebshopCommandValidator(IApplicationDbContext context)
         {
             _context = context;
 
@@ -30,7 +29,7 @@ namespace Mugger.Application.Webshops.Commands.CreateWebshop
                 .NotEmpty().WithMessage("Description is required.");
         }
 
-        public async Task<bool> BeUniqueName(CreateWebshopCommand model, string name, CancellationToken cancellationToken)
+        public async Task<bool> BeUniqueName(UpdateWebshopCommand model, string name, CancellationToken cancellationToken)
         {
             return await _context.Webshops.AllAsync(w => w.Name != name);
         }

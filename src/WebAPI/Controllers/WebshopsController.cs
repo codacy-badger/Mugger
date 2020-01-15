@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 using Mugger.Application.Webshops.Commands.CreateWebshop;
 using Mugger.Application.Webshops.Commands.DeleteWebshop;
-using System.Threading.Tasks;
+using Mugger.Application.Webshops.Commands.UpdateWebshop;
+
 
 namespace Mugger.WebAPI.Controllers
 {
@@ -12,6 +14,19 @@ namespace Mugger.WebAPI.Controllers
         public async Task<ActionResult<long>> Create(CreateWebshopCommand command)
         {
             return await Mediator.Send(command);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<ActionResult> Update(long id, UpdateWebshopCommand command)
+        {
+            if (id != command.Id)
+            {
+                return BadRequest();
+            }
+
+            await Mediator.Send(command);
+
+            return NoContent();
         }
 
         [HttpDelete("{id}")]

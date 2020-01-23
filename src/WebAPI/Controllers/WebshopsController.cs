@@ -3,12 +3,19 @@ using System.Threading.Tasks;
 using Mugger.Application.Webshops.Commands.CreateWebshop;
 using Mugger.Application.Webshops.Commands.DeleteWebshop;
 using Mugger.Application.Webshops.Commands.UpdateWebshop;
-
+using Mugger.Application.Webshops.Queries.GetWebshops;
 
 namespace Mugger.WebAPI.Controllers
 {
     public class WebshopsController : ApiController
     {
+
+        [HttpGet]
+        public async Task<ActionResult<GetWebshopsVm>> Get()
+        {
+            return await Mediator.Send(new GetWebshopsQuery());
+        }
+
 
         [HttpPost]
         public async Task<ActionResult<long>> Create(CreateWebshopCommand command)

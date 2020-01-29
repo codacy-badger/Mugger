@@ -1,11 +1,10 @@
 ﻿using Mugger.Application.Common.Mappings;
 using Mugger.Domain.Entities;
 
-namespace Mugger.Application.Webshops.Queries.GetWebshops
+namespace Mugger.Application.Webshops.Queries.GetWebshopDetail
 {
     public class SellerDto : IMapFrom<Seller>
     {
-        public long Id { get; set; }
         public string Slug { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }

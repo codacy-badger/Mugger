@@ -35,8 +35,6 @@ namespace Mugger.Application.UnitTests.Webshops.Queries
             result.Webshops.Count.ShouldBe(4);
 
             var webshops = result.Webshops.First();
-
-            webshops.Sellers.Count.ShouldBe(0);
         }
     }
 }
